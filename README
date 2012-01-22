@@ -1,0 +1,24 @@
+This app helps with flash fullscreen issues on linux multihead systems. 
+It may help you if you get big borders around the video or if you only see a part of the video
+
+Installation:
+	cd src
+	make
+	sudo make install
+
+Usage:
+
+	fakeres width height browser [browser args]
+	# substitute width with the width of your monitor, 
+	# height with the height of your monitor and browser with your favourite browser
+
+Examples:
+
+	fakeres 1920 1080 opera http://youtube.com
+	# will open opera with youtube.com and fullscreen videos will play in 1920x1080
+
+	fakeres 640 480 chromium http://youtube.com
+	# will open chrome with youtube.com and fullscreen videos will play in 640x480
+
+
+# by spontus, fakeres@spontus.se
