@@ -1,0 +1,14 @@
+#!/bin/bash
+if [ $# -lt 3 ] ; then
+	echo Usage: fakeres width height exec [arguments for exec]
+	exit 1
+fi
+args=("$@")
+command=""
+for ((i=2 ;$i<$# ;i=(($i + 1)) ))
+   do
+	command="$command ${args[$i]}"
+   done
+export FAKE_RES_WIDTH=$1
+export FAKE_RES_HEIGHT=$2
+LD_PRELOAD=/usr/lib/libfakeres.so $command
