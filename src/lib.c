@@ -22,12 +22,10 @@ Status XGetGeometry(Display *display, Drawable d, Window *root_return, int *x_re
 	char* height = getenv("FAKE_RES_HEIGHT");
 	unsigned int i_width = 800;
 	unsigned int i_height = 600;	
-        if(width != NULL){
+        if(width != NULL)
                 i_width = (unsigned int)atoi(width);
-        }   
-        if(height != NULL){
+        if(height != NULL)
                 i_height = (unsigned int)atoi(height);
-        }   
 	*width_return = i_width;
 	*height_return = i_height;
 	return s;
