@@ -1,12 +1,13 @@
 
 all:
+	mkdir bin
 	gcc -fPIC -c -Wall src/lib.c -o bin/libfakeres.o
 	gcc -shared bin/libfakeres.o -ldl -o bin/libfakeres.so
 	cp src/fakeres bin/fakeres
 	chmod +x bin/fakeres
 	
 clean: uninstall
-	rm -f bin/* 
+	rm -rf bin 
 
 install:
 	cp bin/libfakeres.so /usr/lib
